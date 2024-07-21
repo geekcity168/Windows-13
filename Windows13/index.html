@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 13 Mockup</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="assets/img/icons/pngwing.com.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <div class="login-box">
+            <div class="pp">
+                <img src="assets/img/icons/user-icon.png" alt="">
+            </div>
+            <div class="user-name">Administrator</div>
+            <div class="login-input">
+                <input type="password" id="loginPassword">
+                <button type="button" id="togglePassword" class="toggle-password">
+                    <i id="toggleIcon" class="fas fa-eye"></i>
+                </button>
+            </div>
+            <div class="link-button">
+                <button>Forgot Password</button>
+            </div>
+        </div>
+        <div class="bottom-elements">
+            <div class="bottom-left">
+                <div class="account">
+                    <div class="pp-small">
+                        <img src="assets/img/icons/user-icon.png" alt="">
+                    </div>
+                    <div class="user-switch">
+                        Administrator
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-right">
+                <button id="wifi">  
+                    <i class="fas fa-wifi"></i>
+                </button>
+                <button id="access">
+                    <i class="fas fa-universal-access"></i>
+                </button>
+                <button id="power">
+                    <i class="fas fa-power-off"></i>
+                </button>
+            </div>
+            <div class="popup-win-dark" id="wifiPopup">
+                <div class="bottom-btns">
+                    <div class="btn-column">
+                        <div class="icon">
+                            <i class="fas fa-wifi rotate-45"></i> 
+                        </div>
+                        <div class="btn-name">Wifi</div>
+                    </div>
+                    <div class="btn-column">
+                        <div class="icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="btn-name">Airplane Mode</div>
+                    </div>                   
+                </div>
+            </div>
+            <div class="popup-win-dark" id="accesPopup">
+                <ul class="no-list">
+                    <li>
+                        <div class="li-name"><i class="fas fa-search-plus"></i>Magifier</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="li-name"><i class="fas fa-adjust"></i>Contrast theme</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="li-name"><i class="fas fa-podcast"></i>Narrator</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="li-name"><i class="fas fa-microphone"></i>Voice access</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="li-name"><i class="fas fa-keyboard"></i>On-screen keyboard</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="li-name"><i class="fas fa-sticky-note"></i>Sticky keys</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="li-name"><i class="fas fa-filter"></i>Filter keys</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-win-dark-sm" id="powerPopup">
+                <ul class="no-list">
+                    <li><i class="fas fa-moon rotate-left"></i>Sleep</li>
+                    <li><i class="fas fa-power-off"></i>Shut down</li>
+                    <li><i class="fas fa-undo"></i>Restart</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="container" id="loginLoading">
+        <div class="login-box">
+            <div class="pp">
+                <img src="assets/img/icons/user-icon.png" alt="">
+            </div>
+            <div class="user-name">Administrator</div>
+            <div class="loader"></div>
+            <div class="text-medium">Please wait</div>
+        </div>
+    </div>
+    <div class="container" id="passError" style="display: none;">
+        <div class="login-box">
+            <div class="pp">
+                <img src="assets/img/icons/user-icon.png" alt="">
+            </div>
+            <div class="user-name">Administrator</div>
+            <div class="msg-medium">The password is incorrect. Try again</div>
+            <button id="tryAgain">OK</button>
+        </div>
+    </div>
+    
+    <script src="app/script.js"></script>
+</body>
+</html>

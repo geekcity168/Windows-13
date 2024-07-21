@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 13 Mockup</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="assets/img/icons/pngwing.com.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container-window" id="windowContainer" oncontextmenu="showContextMenu(event)">
+        <div class="foot-taskbar">
+            <div class="center-buttons">
+                <button id="startButton">
+                    <img src="assets/img/icons/start-icon.webp" alt="">
+                </button>
+                <button>
+                    <img src="assets/img/icons/task-view.png" alt="">
+                </button>
+                <button>
+                    <img src="assets/img/icons/edge-logo.png" alt="">
+                </button>
+                <button>
+                    <img src="assets/img/icons/folder-icon.png" alt="">
+                </button>
+            </div>
+            <div class="right-controls">
+                <button>
+                    <i class="fas fa-angle-up"></i>
+                </button>
+                <button>
+                    <i class="fas fa-cloud"></i>
+                </button>
+                <div class="small-icons">
+                    <button>
+                        <i class="fas fa-wifi"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-battery-three-quarters"></i>
+                    </button>
+                </div>
+                <div class="time-and-date">
+                    <div id="currentTime"></div>
+                    <div id="currentDate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contextMenu" class="context-menu" style="display: none;">
+        <ul>
+            <li class="view-menu-item">View
+                <ul class="submenu">
+                    <li>Large icons</li>
+                    <li>Medium icons</li>
+                    <li>Small icons</li>
+                    <hr>
+                    <li>Auto Arrange icons</li>
+                    <li>Align icons to grid</li>
+                    <hr>
+                    <li>Show desktop icons</li>
+                </ul>
+            </li>
+            <li class="view-menu-item">Sort by
+                <ul class="submenu sm">
+                    <li>Name</li>
+                    <li>Size</li>
+                    <li>Name type</li>
+                    <li>Date modified</li>
+                </ul>
+            </li>
+            <li onclick="refresh()">Refresh</li>
+            <hr>
+            <li class="view-menu-item">New
+                <ul class="submenu" id="newSubmenu">
+                    <li><i class="fas fa-folder"></i> Folder</li>
+                    <li><i class="fas fa-link"></i> Shortcut</li>
+                    <li><i class="fas fa-file-alt"></i> Text document</li>
+                    <li><i class="fas fa-image"></i> Bitmap image</li>
+                    <li><i class="fas fa-file-archive"></i> Zip folder</li>
+                </ul>
+            </li>
+            <hr>
+            <li>Settings</li>
+            <li>Taskbar settings</li>
+            <hr>
+            <li>Turn off</li>
+            <li>Display settings</li>
+            <li>Personalize</li>
+        </ul>
+    </div>
+
+    <div class="start-menu" id="startMenu">
+        <div class="start-search">
+            <input type="text" placeholder="Search for apps, settings and documents" id="startSearch">
+        </div>
+        <div class="pinned-apps">
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/microsoftedge.svg" alt="Microsoft Edge">
+                <div class="app-name">Microsoft Edge</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/windows.svg" alt="Windows">
+                <div class="app-name">Windows</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/windows10.svg" alt="Windows 10">
+                <div class="app-name">Windows 10</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/windowsxp.svg" alt="Windows XP">
+                <div class="app-name">Windows XP</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@12.3.0/icons/microsoftword.svg" alt="Word">
+                <div class="app-name">Word</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/microsoftexcel.svg" alt="Excel">
+                <div class="app-name">Excel</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/microsoftpowerpoint.svg" alt="PowerPoint">
+                <div class="app-name">PowerPoint</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/microsoftoutlook.svg" alt="Outlook">
+                <div class="app-name">Outlook</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/microsoftonenote.svg" alt="OneNote">
+                <div class="app-name">OneNote</div>
+            </div>
+            <div class="app">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/microsoftteams.svg" alt="Teams">
+                <div class="app-name">Teams</div>
+            </div>
+        </div>
+        <div class="bottom-start">
+            <div class="current-user">
+                <div class="pp-small inline">
+                    <img src="assets/img/icons/user-icon.png" alt="">
+                </div>
+                <div class="user-name-sm">Administrator</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app/win.js"></script>
+</body>
+</html>
